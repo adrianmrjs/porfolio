@@ -225,9 +225,6 @@ section .title::after {
 }
 
 /* about section styling */
-.about .title::after {
-  content: "who i am";
-}
 .about .about-content .left {
   width: 45%;
 }
@@ -283,9 +280,25 @@ section .title::after {
 .services .title::after,
 .teams .title::after {
   background: #111;
-  content: "what i provide";
 }
 
+.services .serv-content a {
+  display: inline-block;
+  background: #105697;
+  color: #fff;
+  font-size: 15px;
+  padding: 6px 16px;
+  margin-top: 20px;
+  font-weight: 400;
+  border-radius: 6px;
+  border: 2px solid #105697;
+  transition: all 0.3s ease;
+}
+.services .serv-content a:hover {
+  color: #105697;
+  background: white;
+  border: 2px solid white;
+}
 .services .serv-content .card {
   width: calc(33% - 20px);
   background: #222;
@@ -326,8 +339,60 @@ section .title::after {
 }
 
 /* skills section styling */
-.skills .title::after {
-  content: "what i know";
+.skills .skills-content-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.skills .skills-content-icons .boxicons-left {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+.skills .skills-content-icons .boxicons-left .text-icons {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 1rem;
+  width: 350px;
+  padding-bottom: 1rem;
+}
+.skills .skills-content-icons .boxicons-left .boxicons {
+  width: 300px;
+}
+.skills .skills-content-icons .boxicons-left .boxicons ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.skills .skills-content-icons .boxicons-left .boxicons ul li {
+  margin: 1rem;
+}
+.skills .skills-content-icons .boxicons-left .boxicons ul li a {
+  color: black;
+}
+.skills .skills-content-icons .boxicons-left .boxicons ul li a:hover {
+  color: #1475d2;
+}
+.skills .skills-content-icons .boxicons-left .boxicons ul li i {
+  font-size: 3rem;
+}
+.skills .skills-content-icons .boxicons-right {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+  width: 100%;
+  max-width: 350px;
+}
+.skills .skills-content-icons .boxicons-right .text-icons {
+  padding-bottom: 1rem;
 }
 .skills .skills-content .column {
   width: calc(50% - 30px);
@@ -472,9 +537,6 @@ section .title::after {
 }
 .contact .head {
   color: white;
-}
-.contact .title::after {
-  content: "get in touch";
 }
 .contact .contact-content .column {
   width: calc(50% - 30px);

@@ -256,10 +256,6 @@ section .title {
 /* about section styling */
 
 .about {
-  .title::after {
-    content: "who i am";
-  }
-
   .about-content {
     .left {
       width: 45%;
@@ -326,10 +322,28 @@ section .title {
 .services .title::after,
 .teams .title::after {
   background: #111;
-  content: "what i provide";
 }
 
 .services .serv-content {
+  a {
+    display: inline-block;
+    background: #105697;
+    color: #fff;
+    font-size: 15px;
+    padding: 6px 16px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid #105697;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: #105697;
+      background: white;
+      border: 2px solid white;
+    }
+  }
+
   .card {
     width: calc(33% - 20px);
     background: #222;
@@ -380,8 +394,60 @@ section .title {
 /* skills section styling */
 
 .skills {
-  .title::after {
-    content: "what i know";
+  .skills-content-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    .boxicons-left {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 1rem;
+      .text-icons {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        font-size: 1rem;
+        width: 350px;
+        padding-bottom: 1rem;
+      }
+      .boxicons {
+        width: 300px;
+        ul {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          list-style: none;
+          li {
+            margin: 1rem;
+            a {
+              color: black;
+            }
+            a:hover {
+              color: #1475d2;
+            }
+            i {
+              font-size: 3rem;
+            }
+          }
+        }
+      }
+    }
+    .boxicons-right {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 1rem;
+      width: 100%;
+      max-width: 350px;
+      .text-icons {
+        padding-bottom: 1rem;
+      }
+    }
   }
 
   .skills-content {
@@ -562,10 +628,6 @@ section .title {
 
   .head {
     color: white;
-  }
-
-  .title::after {
-    content: "get in touch";
   }
 
   .contact-content {
